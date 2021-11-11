@@ -1,5 +1,5 @@
 FROM openjdk:11
 COPY . /usr/src/myapp 
 WORKDIR /usr/src/myapp 
-EXPOSE 8093 
+EXPOSE 8092 
 CMD ["java", "-jar", "EmployeePayrollManagementSystem-0.0.1-SNAPSHOT.jar"]
