@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+
+  db46131555:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: password
+
+  app461315555:
+    image: arjunbel/emp46131555
+    restart: always
+    environment:
+      DBHOST: db46131555
+      DBPORT: 5432
+      DBNAME: postgres
+      DBUSER: postgres
+      DBPASS: password
+    ports:
+      - 30030:8092
+    depends_on:
+      - db46131555
